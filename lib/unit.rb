@@ -1,3 +1,4 @@
+#Convert any unit to Millimeter
 class Unit
   METRE = Object.new
   CM = Object.new
