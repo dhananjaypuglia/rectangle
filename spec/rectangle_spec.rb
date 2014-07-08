@@ -3,18 +3,18 @@ require 'spec_helper'
 describe Rectangle do
 
   it "calulates the perimeter in mm for the given length of 2 m and 20 cm" do
-    length=Line.new(2, "m")
-    breadth=Line.new(20, "cm")
+    length=Line.new(2, Unit.new(Unit::METRE))
+    breadth=Line.new(20, Unit.new(Unit::CM))
     rectangle=Rectangle.new(length, breadth)
-    expected_length=Line.new(4400,"mm")
+    expected_length=Line.new(4400,Unit.new(Unit::MM))
     expect(rectangle.perimeter).to eq(expected_length)
   end
   context "equality" do
     let (:length) do
-      length=Line.new(2, "m")
+      length=Line.new(2, Unit.new(Unit::METRE))
     end
     let (:breadth) do
-      breadth=Line.new(20, "cm")
+      breadth=Line.new(20, Unit.new(Unit::CM))
     end
     let (:rectangle) do
       rectangle=Rectangle.new(length, breadth)
