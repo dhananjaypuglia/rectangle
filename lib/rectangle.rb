@@ -26,7 +26,7 @@ class Rectangle
   end
 
   def perimeter
-    Line.new(2*(@length.line_length+@breadth.line_length),Unit.new(Unit::MM))
+    Line.new(2*(@length.line_length+@breadth.line_length),Unit::MM)
   end
 
 end

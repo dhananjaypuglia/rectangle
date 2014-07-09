@@ -2,7 +2,8 @@
 class Line
   attr_reader :line_length
 
-  def initialize length, unit
+  def initialize length, unit_type
+    unit=Unit.new(unit_type)
     @line_length =  unit.to_mm length
   end
   def == second_value
