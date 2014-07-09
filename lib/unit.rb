@@ -10,13 +10,13 @@ class Unit
   def to_mm length
     case @type
       when Unit::METRE
-        line_length = length*1000
+        length*1000
       when Unit::CM
-        line_length = length*10
+        length*10
       when Unit::MM
-        line_length = length
+        length
       else
-        line_length = length
+        length
 
     end
   end
